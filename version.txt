@@ -1,0 +1,2 @@
+version 0.1 21/06/2015 Original Authoring
+version 0.2 28/06/2016 Shipped JSONLexer.h, missing from original version 0.1
