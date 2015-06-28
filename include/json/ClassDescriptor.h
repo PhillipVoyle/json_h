@@ -26,7 +26,7 @@ public:
    class ClassDescriptor<X> \
    { \
    public: \
-   typedef X class_t; \
+      typedef X class_t; \
       typedef ClassDescriptor<X> descriptor_t; \
       constexpr const char* get_name() const { return #X; } \
       template<typename TCallback> \
@@ -42,6 +42,11 @@ typename ClassDescriptor<T>::descriptor_t GetTypeDescriptor(const T& t)
    return typename ClassDescriptor<T>::descriptor_t {};
 }
 
+typename ClassDescriptor<char*>::descriptor_t GetTypeDescriptor(const char* t)
+{
+   return PrimitiveTypeDescriptor<char*> {};
+}
+
 template <typename TWriter, typename TClass>
 class WriteObjectFunctor
 {
@@ -52,6 +57,10 @@ public:
    WriteObjectFunctor(TWriter& writer, const TClass& t):m_writer(writer), m_t(t)
    {
       m_first = true;
+   }
+   
+   WriteObjectFunctor(TWriter& writer, const TClass& t, bool first):m_writer(writer), m_t(t), m_first(first)
+   {
    }
    
    template<typename TPropertyType>

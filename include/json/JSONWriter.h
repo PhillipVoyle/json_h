@@ -56,7 +56,7 @@ public:
   {
       m_stream << value;
   }
-  
+ 
   void WriteValue(const std::string& str)
   {
       m_stream << "\"";
@@ -103,6 +103,11 @@ public:
           m_stream << "false";
       }
   }
+  
+   void WriteNull()
+   {
+      m_stream << "null";
+   }
   
   void BeginArray()
   {

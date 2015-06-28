@@ -22,6 +22,8 @@
 #include "ArrayTypeDescriptor.h"
 #include "VectorTypeDescriptor.h"
 #include "MapTypeDescriptor.h"
+#include "InterfaceDescriptor.h"
+#include "PointerTypeDescriptor.h"
 
 template<typename TWriter, typename T>
 void WriteObject(TWriter& writer, const T& t);

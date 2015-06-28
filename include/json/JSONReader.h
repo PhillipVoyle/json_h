@@ -161,12 +161,12 @@ public:
 
    void ReadValue(bool& result)
    {
-      if ((m_lexer.Get().type == JSONLexicon::IDENTIFIER) && (m_lexer.Get().lexicon == "true"))
+      if((m_lexer.Get().type == JSONLexicon::STRING) && (m_lexer.Get().lexicon == "true"))
       {
           result = true;
           m_lexer.Advance();
       }
-	   else if ((m_lexer.Get().type == JSONLexicon::IDENTIFIER) && (m_lexer.Get().lexicon == "false"))
+      else if((m_lexer.Get().type == JSONLexicon::STRING) && (m_lexer.Get().lexicon == "false"))
       {
           result = false;
           m_lexer.Advance();
@@ -199,7 +199,7 @@ public:
       }
    }
 
-   bool ReadValue(float& result)
+   void ReadValue(float& result)
    {
       if((m_lexer.Get().type == JSONLexicon::FLOAT) || (m_lexer.Get().type == JSONLexicon::INTEGER))
       {
