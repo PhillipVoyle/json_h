@@ -16,7 +16,7 @@ class InterfaceDescriptor
 
 #define BEGIN_INTERFACE_DESCRIPTOR(X) \
 template<> class InterfaceDescriptor<X>; \
-template<> class ClassDescriptor<X> { public: typedef InterfaceDescriptor<IOperation> descriptor_t;}; \
+template<> class ClassDescriptor<X> { public: typedef InterfaceDescriptor<X> descriptor_t;}; \
 template<> \
 class InterfaceDescriptor<X> { public: \
    template<typename TCallback>\
