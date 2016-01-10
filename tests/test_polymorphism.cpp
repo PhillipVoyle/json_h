@@ -6,7 +6,7 @@
 class IOperation
 {
 public:
-   virtual ~IOperation() = 0;
+   virtual ~IOperation() { }
    virtual float Execute() = 0;
 };
 
