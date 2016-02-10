@@ -9,6 +9,8 @@
 #ifndef cppreflect_InterfaceDescriptor_h
 #define cppreflect_InterfaceDescriptor_h
 
+#include <memory>
+
 template<typename T>
 class InterfaceDescriptor
 {
