@@ -1,5 +1,5 @@
 //
-//  JSON.h
+//  json.h
 //  cppreflect
 //
 //  Created by Phillip Voyle on 21/06/15.

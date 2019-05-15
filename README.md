@@ -7,7 +7,7 @@ Install the header files into your include path, and then you can include the
 main header file in your source file.
 
 ``` cpp
-#include <json/JSON.h>
+#include <json/json.h>
 ```
 
 Class Stubs
@@ -18,7 +18,7 @@ reader and writer you use the BEGIN_CLASS_DESCRIPTOR, END_CLASS_DESCRIPTOR, and
 CLASS_DESCRIPTOR_ENTRY preprocessor macros. 
 
 ``` cpp
-#include <json/JSON.h>
+#include <json/json.h>
 
 class AClass
 {
@@ -38,7 +38,7 @@ END_CLASS_DESCRIPTOR()
 
 Conversion to and from Strings
 ------------------------------
-JSON.h allows C++ objects with descriptor stubs to be converted to and from
+json.h allows C++ objects with descriptor stubs to be converted to and from
 strings using the ToJSON and FromJSON functions.
 
 ``` cpp
@@ -60,7 +60,7 @@ void WriteRead()
 
 Using Streams
 -------------
-It's also possible to use JSON.h with C++ Streams, such as std::istream, and
+It's also possible to use json.h with C++ Streams, such as std::istream, and
 std::ostream. You can do so using ReadJSON and WriteJSON. You can even do so
 using std::cin and std::cout.
 

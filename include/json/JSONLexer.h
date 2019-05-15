@@ -37,7 +37,7 @@
       {
          throw std::runtime_error("end of file");
       }
-      m_stream.get();
+      char c = m_stream.get();
       return m_stream.peek();
    }
 
@@ -47,6 +47,7 @@
       if(m_stream.eof())
       {
          next.type = JSONLexicon::END;
+         return;
       }
       
       char c = m_stream.peek();
