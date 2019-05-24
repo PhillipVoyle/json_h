@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{190DADCD-3C9F-45FF-8E7C-EFF98B238553}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		include\json\ArrayTypeDescriptor.h = include\json\ArrayTypeDescriptor.h
+		include\json\ClassDescriptor.h = include\json\ClassDescriptor.h
+		include\json\InterfaceDescriptor.h = include\json\InterfaceDescriptor.h
+		include\json\json.h = include\json\json.h
+		include\json\JSONLexer.h = include\json\JSONLexer.h
+		include\json\JSONReader.h = include\json\JSONReader.h
+		include\json\JSONWriter.h = include\json\JSONWriter.h
+		include\json\MapTypeDescriptor.h = include\json\MapTypeDescriptor.h
+		include\json\PointerTypeDescriptor.h = include\json\PointerTypeDescriptor.h
+		README.md = README.md
+		test_polymorphism\test_polymorphism.vcxproj = test_polymorphism\test_polymorphism.vcxproj
+		include\json\VectorTypeDescriptor.h = include\json\VectorTypeDescriptor.h
+		version.txt = version.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_boolean", "test_boolean\test_boolean.vcxproj", "{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_polymorphism", "test_polymorphism\test_polymorphism.vcxproj", "{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}.Debug|x64.ActiveCfg = Debug|x64
+		{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}.Debug|x64.Build.0 = Debug|x64
+		{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}.Debug|x86.Build.0 = Debug|Win32
+		{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}.Release|x64.ActiveCfg = Release|x64
+		{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}.Release|x64.Build.0 = Release|x64
+		{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}.Release|x86.ActiveCfg = Release|Win32
+		{BCC16F2F-575A-46EA-945D-9E5EA4F737B9}.Release|x86.Build.0 = Release|Win32
+		{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}.Debug|x64.ActiveCfg = Debug|x64
+		{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}.Debug|x64.Build.0 = Debug|x64
+		{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}.Debug|x86.ActiveCfg = Debug|Win32
+		{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}.Debug|x86.Build.0 = Debug|Win32
+		{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}.Release|x64.ActiveCfg = Release|x64
+		{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}.Release|x64.Build.0 = Release|x64
+		{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}.Release|x86.ActiveCfg = Release|Win32
+		{ED169DC1-C50E-4C80-9B6F-60E434E30C3E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EDB1CCD-1071-4F6D-9B5F-C077687657D9}
+	EndGlobalSection
+EndGlobal
