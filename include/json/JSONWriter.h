@@ -78,6 +78,7 @@ public:
             break;
          case '\\':
             m_stream << "\\\\";
+            break;
          case '"':
             m_stream << "\\\"";
             break;

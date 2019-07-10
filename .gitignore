@@ -5,3 +5,4 @@ Release/
 *.user
 /tests/test_polymorphism
 /tests/test_boolean
+/tests/test_serialisation
