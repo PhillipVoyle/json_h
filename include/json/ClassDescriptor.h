@@ -42,7 +42,7 @@ typename ClassDescriptor<T>::descriptor_t GetTypeDescriptor(const T& t)
    return typename ClassDescriptor<T>::descriptor_t {};
 }
 
-typename ClassDescriptor<char*>::descriptor_t GetTypeDescriptor(const char* t)
+inline typename ClassDescriptor<char*>::descriptor_t GetTypeDescriptor(const char* t)
 {
    return PrimitiveTypeDescriptor<char*> {};
 }
