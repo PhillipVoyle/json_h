@@ -28,6 +28,7 @@ public:
   void EndObject()
   {
       m_stream << "}";
+      m_first = false;
   }
   
   void BeginProperty(const char* name)
@@ -119,6 +120,7 @@ public:
   void EndArray()
   {
       m_stream << "]";
+      m_first = false;
   }
   
   void BeginItem()
