@@ -1,6 +1,14 @@
 # json.h
 A JSON Serialisation Project for C++
 
+Intent and Approach
+-------------------
+Throughout my career I've noted on several occasions the use of runtime polymorphism is used when a compile time approach would be sufficient. Compile time methods can produce code with superior performance as compared to the typical runtime polymophism we often see. C++ has particular strengths in this area and this software started as an experiment in authoring boiler plate for a type safe serialiser and deserialiser.
+
+What about constexpr?
+---------------------
+I've been thinking about this a bit lately and haven't used it in this software. Maybe one day
+
 How to use this software
 ========================
 Install the header files into your include path, and then you can include the
