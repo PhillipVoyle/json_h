@@ -186,3 +186,66 @@ containing your polymorphic objects.
    std::cout << sOut << std::endl;
 
 ```
+
+# Authoring New Descriptor Types
+A descriptor can be thought of as a set of functions and specialisations that allows json.h to find the specific specialisation for the type, and a method for taking that matching classes and performing derialisation and deserialisation on them
+
+A good example is in MapTypeDescriptor.h
+
+
+```
+#include <map>
+
+template<typename T>
+class ClassDescriptor;
+
+template<typename T>
+class MapTypeDescriptor
+{
+};
+
+template<typename T>
+class ClassDescriptor<std::map<std::string, T>>
+{
+public:
+   typedef MapTypeDescriptor<std::map<std::string, T>> descriptor_t;
+};
+
+template<typename TReader, typename T>
+void DispatchReadObject(const MapTypeDescriptor<std::map<std::string, T>>& descriptor, TReader &reader, std::map<std::string, T>& t)
+{
+   reader.EnterObject();
+   if(!reader.IsEndObject())
+   {
+      std::string sProperty;
+      reader.FirstProperty(sProperty);
+      for(;;)
+      {
+         ReadJSON(reader, t[sProperty]);
+         if(reader.IsEndObject())
+         {
+            break;
+         }
+         reader.NextProperty(sProperty);
+      }
+   }
+   reader.LeaveObject();
+}
+
+
+template<typename TWriter, typename T>
+void DispatchWriteObject(const MapTypeDescriptor<std::map<std::string, T>>& descriptor, TWriter& writer, const std::map<std::string, T>& t)
+{
+   writer.BeginObject("map");
+   for(auto it = t.begin(); it != t.end(); it++)
+   {
+      writer.BeginProperty(it->first.c_str());
+      WriteJSON(writer, it->second);
+      writer.EndProperty();
+   }
+   writer.EndObject();
+}
+```
+
+Note the specialisation of `ClassDescriptor` for maps of `std::string` to type `T` which indicates the type of descriptor `MapTypeDescriptor`. Then there are template implementations for the `DispatchWriteObject` and `DispatchReadObject` which define how instances of the object type would be converted to and from JSON via the JsonReader and JsonWriter object types. Note that these are not explicitly mentioned here, and the implementor is free to replace the implementation of these objects if desired
+
