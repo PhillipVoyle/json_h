@@ -187,7 +187,8 @@ containing your polymorphic objects.
 
 ```
 
-# Authoring New Descriptor Types
+Authoring New Descriptor Types
+------------------------------
 A descriptor can be thought of as a set of functions and specialisations that allows json.h to find the specific specialisation for the type, and a method for taking that matching classes and performing derialisation and deserialisation on them
 
 A good example is in MapTypeDescriptor.h
